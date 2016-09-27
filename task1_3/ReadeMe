@@ -12,4 +12,24 @@
     其他效果图中给出的标识均被正确地实现。
 
 
-分析：
+任务笔记：
+    这个任务就是典型的双飞翼布局。
+    实现过程：
+        1.建立如下布局
+            <div class = "midContent fl ">
+		    </div>	
+		    <div class = "leftContent fl setBorder">
+		    </div>	
+		    <div class = "rightContent  fl setBorder ">
+		    </div>
+       2.然后将所有元素浮动， 同时设置 midContent宽度为100% leftContent rightContent 的宽度。
+       3.设置leftContent  rightContent  设置负外边距， leftContent-100% rightContent 为-元素宽度。
+       4.在midContent 添加一个子div元素来放置主要内容， 并将子元素的外边距设置到合适的位置。
+    
+   注意事项：
+       1.整个过程中，可以将可以复用的代码提取出来， 例如设置浮动，设置为fl  讲外边框写成， setBorder类， 这样就避免了多次重复写入代码。
+       2.注意选择器的灵活使用， 例如，个人logo中， 就不需要为每个li都设置一个class 直接使用合适的选择器就好了。
+       
+       
+   该任务还可以使用flex布局实现。
+   实现过程：
