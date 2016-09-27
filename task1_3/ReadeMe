@@ -33,3 +33,9 @@
        
    该任务还可以使用flex布局实现。
    实现过程：
+   	1.设置容器为display:flex 
+	2.设置leftContent  rightContent的宽度，然后将在midContent设置为flex:1 整个项目的布局就完成了。 
+
+   总结：
+   	1.整体来说，flex布局明显更加优秀。代码简洁， 逻辑简单。  
+	2.flex学习地址：<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">阮一峰的flex布局教程</a>
