@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1_12</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .demo1 table {
+            margin: 0 auto;
+            border: none;
+            text-align: left;
+        }
+        
+        .demo1 .forWidth {
+            width: 300px;
+        }
+        
+        .demo1 thead {
+            background-color: black;
+            color: aliceblue;
+        }
+        
+        .demo1 tbody tr:nth-child(-n+3) {
+            color: red;
+        }
+        
+        .demo1 tbody tr:nth-child(2n) {
+            background-color: #ccc;
+        }
+        
+        .demo2 {
+            margin: 0 auto;
+            margin: 100px;
+            text-align: center;
+        }
+        
+        .demo2 input {
+            width: 300px;
+        }
+        
+        .demo2 input:focus {
+            width: 500px;
+            outline: #00f78f groove 5px;
+            ;
+            transition: width 2s;
+        }
+        
+        .demo3 {
+            background-color: #ccc;
+            position: relative;
+            width: 500px;
+            height: 300px;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+        
+        .demo3 .switch {
+            list-style: none;
+            text-align: center;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+        }
+        
+        .demo3 .switch li {
+            width: 20px;
+            height: 20px;
+            margin: 0 2px;
+            float: left;
+            border-radius: 2px;
+            background-color: rgba(19, 148, 229, 0.77);
+        }
+        
+        a {
+            text-decoration: none;
+            color: antiquewhite
+        }
+        
+        .demo3 #pic1 {
+            width: 33%;
+            height: 100%;
+            position: absolute;
+            background-color: #28c740;
+            z-index: -1;
+            border-radius: 10px;
+        }
+        
+        .demo3 #pic2 {
+            width: 66%;
+            height: 100%;
+            position: absolute;
+            background-color: #28c740;
+            border-radius: 10px;
+            z-index: -1;
+        }
+        
+        .demo3 #pic3 {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: #28c740;
+            border-radius: 10px;
+            z-index: -1;
+        }
+        
+        #pic1:target {
+            z-index: 1;
+        }
+        
+        #pic2:target {
+            z-index: 1;
+        }
+        
+        #pic3:target {
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo1">
+        <table>
+            <thead>
+                <tr>
+                    <th>排名</th>
+                    <th class="forWidth">网站</th>
+                    <th>热度</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1.</th>
+                    <th>百度前端学院</th>
+                    <th>1300</th>
+                </tr>
+                <tr>
+                    <th>2.</th>
+                    <th>百度前端学院</th>
+                    <th>1300</th>
+                </tr>
+                <tr>
+                    <th>3.</th>
+                    <th>百度前端学院</th>
+                    <th>1300</th>
+                </tr>
+                <tr>
+                    <th>4.</th>
+                    <th>百度前端学院</th>
+                    <th>1300</th>
+                </tr>
+                <tr>
+                    <th>5.</th>
+                    <th>百度前端学院</th>
+                    <th>1300</th>
+                </tr>
+                <tr>
+                    <th>6.</th>
+                    <th>百度前端学院</th>
+                    <th>1300</th>
+                </tr>
+                <tr>
+                    <th>7.</th>
+                    <th>百度前端学院</th>
+                    <th>1300</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="demo2">
+        <input type="text" name="" id="">
+    </div>
+    <div class="demo3">
+        <div id="pic1"></div>
+        <div id="pic2"></div>
+        <div id="pic3"></div>
+        <div>
+            <ul class="switch">
+                <li><a href="#pic1">1</a></li>
+                <li><a href="#pic2">2</a></li>
+                <li><a href="#pic3">3</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
