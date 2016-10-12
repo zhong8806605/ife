@@ -25,7 +25,8 @@ CSS3主要由以下几部分构成[点击见详情](https://developer.mozilla.or
 * table标签一个th设置了宽度所有的宽度都会改变。
 * nth:child()选择器应该紧贴他需要生效的对象。同时，不同的盒子里面的对象都会选择，例如：
    <div><tr></tr></div>
-    <div><tr></tr></div>那么，tr：nth(1) 两个tr都会被选中。
+    <div><tr></tr></div>
+    那么，tr：nth(1) 两个tr都会被选中。
 * transition属性需要设置的改变的对象，改变前后都需要设置， 不能选择默认。
 * 第三个做一个轮播组件， 首先将索引href属性指向各自的锚， 然后通过：target 选择器，选中活动的div， 最后通过改变活动标签的z-index属性来控制显示。tips:z-index属性 应该首先是定位或者flex布局。
 
