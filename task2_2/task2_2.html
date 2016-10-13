@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .city {
+        list-style: none;
+        font-size: 20px;
+    }
+    
+    .city span {
+        padding-left: 10px;
+        width: 30px;
+    }
+    #aqi-list{
+        height: 150px;
+    }
+    #select {
+        width: 200px;
+        margin-top: 20px;
+    }
+    
+    .warp {
+        width: 960px;
+        margin: 0 auto;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="warp">
+        <h3>污染城市列表</h3>
+        <ul id="aqi-list">
+        </ul>
+        <select id="select">
+            <option value="城市">从高到低</option>
+            <option value="数值">从低到高</option>
+            <option value="">大于60</option>
+        </select>
+    </div>
+    <script type="text/javascript">
+        var aqiData = [
+
+            ["北京", 90],
+            ["上海", 50],
+            ["福州", 10],
+            ["广州", 50],
+            ["成都", 90],
+            ["西安", 100]
+        ];
+        
+        //选择排序方法。
+        function seelect(event) {
+            var greatSixty = [];
+            switch (event.currentTarget.selectedIndex) {
+            case 0:
+                aqiData.sort(function (value1, value2) {
+                    return value2[1] - value1[1];
+                });
+                showCity(aqiData);
+                break;
+            case 1:
+                aqiData.sort(function (value1, value2) {
+                    return value1[1] - value2[1];
+                });
+                showCity(aqiData);
+                break;
+            case 2:
+                greatSixty = aqiData.filter(function (ele) {
+                   return (ele[1] > 60)
+                });
+                showCity(greatSixty);
+                break;
+            }
+        }
+
+        //显示城市
+        function showCity(data) {
+            var node_list = document.getElementById("aqi-list");
+            var node_city = "";
+            data.forEach(function (item, index, arry) {
+                node_city += "<li class = 'city'> " + item[0] + "<span>" + item[1] + "</span>"
+            })
+            node_list.innerHTML = node_city;
+        }
+
+        document.getElementById("select").onclick = seelect;
+        showCity(aqiData);
+    </script>
+</body>
+
+</html>
