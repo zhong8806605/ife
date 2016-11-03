@@ -4,7 +4,7 @@ var Ship = function (name, id) {
     this.id = id;
     this.energy = 100;
     this.pathway = 1;
-    this.speed = 1;
+    this.speed = 0.5;
     this.deg = 0.01;
     this.flFun = null;
 }
