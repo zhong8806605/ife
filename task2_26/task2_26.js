@@ -21,13 +21,16 @@ Ship.prototype.createShip = function () {
 }
 Ship.prototype.fly = function () {
     var that = this;
-    this.flFun = setInterval(function () {
-        var shipNode = document.getElementById(that.id);
-        shipNode.style.transform = "rotate(" + (that.deg += that.speed) + "deg)";
-    }, 1);
+    if (!this.flFun) {
+        this.flFun = setInterval(function () {
+            var shipNode = document.getElementById(that.id);
+            shipNode.style.transform = "rotate(" + (that.deg += that.speed) + "deg)";
+        }, 1);
+    }
 }
 Ship.prototype.stop = function () {
     clearInterval(this.flFun);
+    this.flFun = null;
 }
 
 //控制中心（指挥官）
