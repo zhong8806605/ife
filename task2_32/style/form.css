@@ -1,0 +1,17 @@
+
+.form
+{
+    width: 300px;
+}
+.form input{
+    border-radius: 5px;
+    line-height: 20px;
+    outline: none;
+}
+.notice{
+    color: red;
+    line-height: 20px;
+    height: 20px;
+    font-size: 10px;
+    margin-left: 30px;
+}

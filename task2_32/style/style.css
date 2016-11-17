@@ -1,0 +1,51 @@
+       .wrap {
+           width: 960px;
+           margin: 0 auto;
+           margin-top: 30px
+       }
+       
+       .clear:after {
+           content: "";
+           display: table;
+           clear: both;
+       }
+       
+       .verifyAre {
+           float: left;
+           width: 300px;
+           font-size: 15px;
+       }
+       
+       .showAre {
+           float: left;
+           width: 500px;
+           margin-left: 30px;
+           border: 1px solid #ccc;
+           text-align: center;
+       }
+       
+       .configAre input,
+       label {
+           height: 20px;
+           vertical-align: middle;
+           line-height: 20px;
+       }
+       
+       #configSubmit {
+           width: 100px;
+           height: 30px;
+           line-height: 30px;
+           margin-top: 20px;
+           border: 1px solid #ccc;
+           background-color: #ccc;
+           text-align: center;
+           cursor: pointer;
+           -moz-user-select: none;
+           -webkit-user-select: none;
+           -ms-user-select: none;
+           user-select: none;
+       }
+       
+       .configType {
+           width: 200px;
+       }
