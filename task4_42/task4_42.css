@@ -1,0 +1,45 @@
+.calendarNextMonth {
+    width: 0px;
+    height: 0px;
+    float: right;
+    border-left: 13px solid black;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.calendarTable {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    border: 1px solid #ccc;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none; 
+}
+.calendarTable td{
+    cursor: pointer;
+}
+.calendarLastMonth {
+    width: 0px;
+    height: 0px;
+    border-right: 13px solid black;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    cursor: pointer;
+}
+
+.calendarCurDay {
+    display: inline-block;
+}
+
+.calendarThead {
+    border-bottom: 1px solid #ccc;
+}
